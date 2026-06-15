@@ -285,7 +285,9 @@ ALIVÉ busca:
 # Equipo
 
 Proyecto desarrollado para promover un turismo accesible, inclusivo y sostenible.
-
+- CEO Founder  Elida Nuñez Vasquez
+- CPO          Valeria Alexandra Villacorta Landeo
+- CTO          Verónica Gazzo
 ---
 
 # Licencia
