@@ -9,12 +9,7 @@ ALIVÉ es una solución tecnológica diseñada para mejorar la experiencia turí
 ## Problema
 
 Millones de personas visitan sitios turísticos cada año, pero gran parte de la experiencia sigue siendo predominantemente visual.
-Las soluciones actuales suelen depender de:
-
-- Smartphones
-- Internet
-- Aplicaciones complejas
-- Acompañamiento constante
+Donde 80% de destinos turísticos carecen de información. (OMT, 2021) y 71% dependen de terceros (WBU, 2022) siendo 21% como prohibir el acceso a perros guía, carecer de menús en braille o señalética táctil, y/o la falta de personal capacitado.
 
 Esto limita la autonomía de personas con discapacidad visual en espacios culturales, arqueológicos y turísticos.
 
@@ -24,12 +19,12 @@ Esto limita la autonomía de personas con discapacidad visual en espacios cultur
 
 ALIVÉ integra una pulsera inteligente, una aplicación accesible y una plataforma cloud para ofrecer:
 
-- Navegación mediante vibraciones hápticas
-- Audioguías automáticas
-- Inteligencia artificial por voz
-- Botón SOS
-- Funcionamiento offline
-- Gestión centralizada para destinos turísticos
+- Navegación mediante vibraciones hápticas.
+- Audioguías automáticas.
+- Inteligencia artificial por voz.
+- Botón SOS.
+- Funcionamiento offline.
+- Gestión centralizada para destinos turísticos.
 
 ---
 
@@ -290,6 +285,39 @@ Proyecto desarrollado para promover un turismo accesible, inclusivo y sostenible
 - CTO          Verónica Gazzo
 ---
 
+# Sobre la estructura del repositorio
+
+alive-platform/
+│
+├── app/
+│   └── alive_app/
+│       ├── lib/
+│       ├── assets/
+│       ├── android/
+│       ├── ios/
+│       └── pubspec.yaml
+│
+├── backend/
+│   └── alive_dashboard/
+│       ├── src/
+│       ├── prisma/
+│       ├── docker/
+│       └── package.json
+│
+├── firmware/
+│   └── esp32_alive/
+│       ├── src/
+│       ├── include/
+│       └── platformio.ini
+│
+├── database/
+│   ├── schema.sql
+│   └── seed.sql
+│
+├── docs/
+│
+└── README.md
+
 # Licencia
 
 MIT License
@@ -298,4 +326,4 @@ MIT License
 
 ## ALIVÉ
 
-**"La accesibilidad no debe depender de la vista, del celular ni de internet."*
+**"Siente el camino, vive la experiencia."**
