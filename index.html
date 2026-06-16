@@ -1,139 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alivé Voz - Aplicación de turismo accesible para personas con discapacidad visual">
-  <meta name="theme-color" content="#2196F3">
-  <title>Alivé Voz - Dashboard Accesible</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%232196F3' width='180' height='180'/><text x='90' y='110' font-size='80' fill='white' text-anchor='middle' font-weight='bold'>🎤</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALIVÉ</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div id="app" class="app-container">
-    <!-- Encabezado -->
-    <header class="app-header" role="banner">
-      <div class="header-content">
-        <h1 class="app-title">🎤 Alivé Voz</h1>
-        <p class="app-subtitle">Turismo accesible para personas con discapacidad visual</p>
-      </div>
-    </header>
 
-    <!-- Contenido principal -->
-    <main class="app-main" role="main" aria-label="Contenido principal">
-      <!-- Sección de control de voz -->
-      <section class="voice-control" aria-label="Control de reconocimiento de voz">
-        <button id="voice-toggle" class="voice-button" aria-label="Alternar micrófono. Estado actual: desactivado">
-          <span class="voice-icon">🎤</span>
-          <span class="voice-text">Iniciar Escucha</span>
-        </button>
-        <div id="status" class="status-indicator" role="status" aria-live="polite" aria-label="Estado de la aplicación">
-          ✓ Listo
-        </div>
-      </section>
+<div class="container">
 
-      <!-- Resultado de transcripción -->
-      <section class="transcript-section" aria-label="Texto reconocido">
-        <h2>Búsqueda por Voz</h2>
-        <div id="transcript" class="transcript-box" role="status" aria-live="assertive" aria-label="Resultado del reconocimiento de voz">
-          Presiona el micrófono para comenzar...
-        </div>
-        <div id="confidence" class="confidence-meter" aria-label="Nivel de confianza del reconocimiento">
-          Confianza: <span id="confidence-value">0%</span>
-        </div>
-      </section>
+    <div class="logo">
+        <h1>ALIVÉ</h1>
+        <p>Siente el camino. Vive la experiencia.</p>
+    </div>
 
-      <!-- Localizaciones cercanas -->
-      <section class="locations-section" aria-label="Ubicaciones turísticas">
-        <h2>🗺️ Ubicaciones Cercanas</h2>
-        <div id="locations-list" class="locations-grid" role="region" aria-label="Lista de ubicaciones turísticas">
-          <p>Cargando ubicaciones...</p>
-        </div>
-      </section>
+    <button id="startBtn" class="main-btn">
+        🎧 Iniciar recorrido
+    </button>
 
-      <!-- Historial de búsquedas -->
-      <section class="history-section" aria-label="Historial de búsquedas">
-        <h2>📋 Historial de Búsquedas</h2>
-        <button id="clear-history" class="btn-secondary" aria-label="Borrar historial de búsquedas">Limpiar Historial</button>
-        <div id="history" class="history-list" role="region" aria-label="Historial de búsquedas anteriores">
-          <p>No hay búsquedas anteriores</p>
-        </div>
-      </section>
+    <button class="secondary-btn">
+        📍 Lugares cercanos
+    </button>
 
-      <!-- Configuración de accesibilidad -->
-      <section class="accessibility-section" aria-label="Configuración de accesibilidad">
-        <h2>⚙️ Configuración</h2>
-        <div class="settings-group">
-          <label class="setting-item">
-            <input type="checkbox" id="high-contrast" aria-label="Habilitar modo de alto contraste">
-            <span>Contraste Alto</span>
-          </label>
-          <label class="setting-item">
-            <input type="checkbox" id="large-text" aria-label="Habilitar modo de texto grande">
-            <span>Texto Grande</span>
-          </label>
-          <label class="setting-item">
-            <input type="checkbox" id="reduce-motion" aria-label="Reducir animaciones">
-            <span>Reducir Animaciones</span>
-          </label>
-        </div>
-        
-        <div class="slider-group">
-          <label for="speech-rate">Velocidad de Habla:</label>
-          <input type="range" id="speech-rate" min="0.5" max="2" step="0.1" value="0.9" aria-label="Ajustar velocidad de síntesis de voz">
-          <span id="speech-rate-value">0.9x</span>
-        </div>
+    <button class="secondary-btn">
+        ℹ Información cultural
+    </button>
 
-        <div class="slider-group">
-          <label for="volume">Volumen:</label>
-          <input type="range" id="volume" min="0" max="100" step="10" value="80" aria-label="Ajustar volumen de salida de voz">
-          <span id="volume-value">80%</span>
-        </div>
+    <button class="emergency-btn">
+        🚨 Emergencia
+    </button>
 
-        <div class="language-group">
-          <label for="language">Idioma:</label>
-          <select id="language" aria-label="Seleccionar idioma de reconocimiento de voz">
-            <option value="es-ES">Español (España)</option>
-            <option value="es-MX">Español (México)</option>
-            <option value="es-AR">Español (Argentina)</option>
-            <option value="es-PE">Español (Perú)</option>
-            <option value="en-US">English (USA)</option>
-            <option value="pt-BR">Português (Brasil)</option>
-            <option value="qu-PE">Quechua (Perú)</option>
-          </select>
-        </div>
-      </section>
+</div>
 
-      <!-- Información offline -->
-      <section class="info-section" aria-label="Estado de conexión">
-        <div id="offline-notice" class="offline-banner" role="status" aria-label="Estado de conexión a internet">
-          📡 Conectado a internet
-        </div>
-        <p class="info-text">✓ Esta aplicación funciona completamente sin conexión a internet. Todos los datos se guardan localmente en tu dispositivo.</p>
-      </section>
-    </main>
+<script src="voice.js"></script>
 
-    <!-- Pie de página -->
-    <footer class="app-footer" role="contentinfo">
-      <p>Alivé Voz v1.0.0 - Aplicación de turismo accesible</p>
-      <p>Desarrollado con ❤️ para la inclusión digital</p>
-    </footer>
-  </div>
-
-  <!-- Scripts -->
-  <script src="js/offline-db.js" defer></script>
-  <script src="js/app.js" defer></script>
-  
-  <!-- Registrar Service Worker para funcionamiento offline -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('js/service-worker.js')
-          .then(reg => console.log('✓ Service Worker registrado'))
-          .catch(err => console.log('✗ Service Worker no registrado:', err));
-      });
-    }
-  </script>
 </body>
 </html>
