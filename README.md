@@ -288,35 +288,88 @@ Proyecto desarrollado para promover un turismo accesible, inclusivo y sostenible
 # Sobre la estructura del repositorio
 
 alive-platform/
+
+├── README.md
+├── LICENSE
+├── .gitignore
+├── package.json
+├── vite.config.js
 │
-├── app/
-│   └── alive_app/
-│       ├── lib/
-│       ├── assets/
-│       ├── android/
-│       ├── ios/
-│       └── pubspec.yaml
+├── public/
+│   ├── manifest.json
+│   ├── favicon.ico
+│   ├── logo-alive.png
+│   └── service-worker.js
 │
-├── backend/
-│   └── alive_dashboard/
-│       ├── src/
-│       ├── prisma/
-│       ├── docker/
-│       └── package.json
+├── src/
 │
-├── firmware/
-│   └── esp32_alive/
-│       ├── src/
-│       ├── include/
-│       └── platformio.ini
+│   ├── index.html
+│   │
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── accessibility.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │
+│   │   ├── app.js
+│   │
+│   │   ├── speech/
+│   │   │   ├── recognition.js
+│   │   │   ├── commands.js
+│   │   │   ├── wakeword.js
+│   │   │   └── tts.js
+│   │
+│   │   ├── beacons/
+│   │   │   ├── beaconManager.js
+│   │   │   ├── bluetooth.js
+│   │   │   └── signalProcessor.js
+│   │
+│   │   ├── navigation/
+│   │   │   ├── routes.js
+│   │   │   ├── guidance.js
+│   │   │   └── vibration.js
+│   │
+│   │   ├── accessibility/
+│   │   │   ├── screenReader.js
+│   │   │   ├── haptics.js
+│   │   │   └── audioDescriptions.js
+│   │
+│   │   └── offline/
+│   │       ├── cacheManager.js
+│   │       ├── offlineMaps.js
+│   │       └── sync.js
 │
-├── database/
-│   ├── schema.sql
-│   └── seed.sql
+│   ├── data/
+│   │
+│   │   ├── huaca-pucllana.json
+│   │   ├── machupicchu.json
+│   │   ├── pachacamac.json
+│   │   └── museo-larco.json
+│   │
+│   ├── audio/
+│   │
+│   │   ├── bienvenida.mp3
+│   │   ├── ayuda.mp3
+│   │   ├── emergencia.mp3
+│   │   └── recorridos/
+│   │
+│   ├── assets/
+│   │
+│   │   ├── logo/
+│   │   ├── icons/
+│   │   └── images/
 │
-├── docs/
+│   └── components/
+│       ├── Home.js
+│       ├── Tour.js
+│       ├── Emergency.js
+│       └── Settings.js
 │
-└── README.md
+└── docs/
+    ├── arquitectura.pdf
+    ├── pitch-deck.pdf
+    └── manual-usuario.pdf
 
 # Licencia
 
