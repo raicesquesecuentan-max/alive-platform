@@ -356,6 +356,8 @@ MIT License
 
 ---
 
-## ALIVÉ
+# ALIVÉ
 
-**"Siente el camino, vive la experiencia."**
+Siente el camino. Vive la experiencia.
+
+Plataforma turística accesible offline para personas con discapacidad visual mediante navegación háptica, audioguías inteligentes y tecnología Beacon BLE.
