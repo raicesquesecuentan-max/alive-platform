@@ -96,22 +96,87 @@ Funciones:
 # Estructura del Proyecto
 
 ```text
-alive-platform/
-
-├── app/
-│   └── alive_app/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── package.json
+├── vite.config.js
 │
-├── backend/
-│   └── alive_dashboard/
+├── public/
+│   ├── manifest.json
+│   ├── favicon.ico
+│   ├── logo-alive.png
+│   └── service-worker.js
 │
-├── firmware/
-│   └── esp32_alive/
+├── src/
 │
-├── docs/
+│   ├── index.html
+│   │
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── accessibility.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │
+│   │   ├── app.js
+│   │
+│   │   ├── speech/
+│   │   │   ├── recognition.js
+│   │   │   ├── commands.js
+│   │   │   ├── wakeword.js
+│   │   │   └── tts.js
+│   │
+│   │   ├── beacons/
+│   │   │   ├── beaconManager.js
+│   │   │   ├── bluetooth.js
+│   │   │   └── signalProcessor.js
+│   │
+│   │   ├── navigation/
+│   │   │   ├── routes.js
+│   │   │   ├── guidance.js
+│   │   │   └── vibration.js
+│   │
+│   │   ├── accessibility/
+│   │   │   ├── screenReader.js
+│   │   │   ├── haptics.js
+│   │   │   └── audioDescriptions.js
+│   │
+│   │   └── offline/
+│   │       ├── cacheManager.js
+│   │       ├── offlineMaps.js
+│   │       └── sync.js
 │
-├── designs/
+│   ├── data/
+│   │
+│   │   ├── huaca-pucllana.json
+│   │   ├── machupicchu.json
+│   │   ├── pachacamac.json
+│   │   └── museo-larco.json
+│   │
+│   ├── audio/
+│   │
+│   │   ├── bienvenida.mp3
+│   │   ├── ayuda.mp3
+│   │   ├── emergencia.mp3
+│   │   └── recorridos/
+│   │
+│   ├── assets/
+│   │
+│   │   ├── logo/
+│   │   ├── icons/
+│   │   └── images/
 │
-└── README.md
+│   └── components/
+│       ├── Home.js
+│       ├── Tour.js
+│       ├── Emergency.js
+│       └── Settings.js
+│
+└── docs/
+    ├── arquitectura.pdf
+    ├── pitch-deck.pdf
+    └── manual-usuario.pdf
 ```
 
 ---
@@ -284,92 +349,6 @@ Proyecto desarrollado para promover un turismo accesible, inclusivo y sostenible
 - CPO          Valeria Alexandra Villacorta Landeo
 - CTO          Verónica Gazzo
 ---
-
-# Sobre la estructura del repositorio
-
-alive-platform/
-
-├── README.md
-├── LICENSE
-├── .gitignore
-├── package.json
-├── vite.config.js
-│
-├── public/
-│   ├── manifest.json
-│   ├── favicon.ico
-│   ├── logo-alive.png
-│   └── service-worker.js
-│
-├── src/
-│
-│   ├── index.html
-│   │
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── accessibility.css
-│   │   └── responsive.css
-│   │
-│   ├── js/
-│   │
-│   │   ├── app.js
-│   │
-│   │   ├── speech/
-│   │   │   ├── recognition.js
-│   │   │   ├── commands.js
-│   │   │   ├── wakeword.js
-│   │   │   └── tts.js
-│   │
-│   │   ├── beacons/
-│   │   │   ├── beaconManager.js
-│   │   │   ├── bluetooth.js
-│   │   │   └── signalProcessor.js
-│   │
-│   │   ├── navigation/
-│   │   │   ├── routes.js
-│   │   │   ├── guidance.js
-│   │   │   └── vibration.js
-│   │
-│   │   ├── accessibility/
-│   │   │   ├── screenReader.js
-│   │   │   ├── haptics.js
-│   │   │   └── audioDescriptions.js
-│   │
-│   │   └── offline/
-│   │       ├── cacheManager.js
-│   │       ├── offlineMaps.js
-│   │       └── sync.js
-│
-│   ├── data/
-│   │
-│   │   ├── huaca-pucllana.json
-│   │   ├── machupicchu.json
-│   │   ├── pachacamac.json
-│   │   └── museo-larco.json
-│   │
-│   ├── audio/
-│   │
-│   │   ├── bienvenida.mp3
-│   │   ├── ayuda.mp3
-│   │   ├── emergencia.mp3
-│   │   └── recorridos/
-│   │
-│   ├── assets/
-│   │
-│   │   ├── logo/
-│   │   ├── icons/
-│   │   └── images/
-│
-│   └── components/
-│       ├── Home.js
-│       ├── Tour.js
-│       ├── Emergency.js
-│       └── Settings.js
-│
-└── docs/
-    ├── arquitectura.pdf
-    ├── pitch-deck.pdf
-    └── manual-usuario.pdf
 
 # Licencia
 
